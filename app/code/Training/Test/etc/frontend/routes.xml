@@ -16,5 +16,8 @@
         <route id="cms" frontName="cms">
             <module name="Training_Test" />
         </route>
+        <route id="catalog">
+            <module name="Training_Test"  before="Magento_Catalog" />
+        </route>
     </router>
 </config>
