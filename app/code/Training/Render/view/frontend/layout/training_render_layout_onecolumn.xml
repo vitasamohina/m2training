@@ -3,4 +3,7 @@ xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_config
     <head>
         <title>Example add title</title>
     </head>
+    <body>
+        <referenceBlock name="testargument" remove="true"/>
+    </body>
 </page>
