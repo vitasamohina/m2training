@@ -1,0 +1,8 @@
+<div class="qnt-box" data-bind="blockLoader: isLoading">
+    <div class="action">
+        <button type="button" data-bind="i18n: 'Show available quantity', click: getQnt"></button>
+    </div>
+    <div class="qnt-info">
+        <p data-bind="text: qnt()"/>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * Product view template
+ *
+ * @var $block \Magento\Catalog\Block\Product\View
+ */
+?>
+<?php $_product = $block->getProduct(); ?>
+<div data-bind="scope: 'qntInfo'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+<script type="text/x-magento-init">
+{
+    "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "qntInfo": {
+                        "component": "Training_Js/js/qnt",
+                        "config": {
+                            "template": "Training_Js/qnt",
+                            "url": <?= json_encode($block->getUrl('training_js/qnt/index')) ?>,
+                            "product_id": <?= (int)$_product->getId() ?>
+                        }
+                    }
+                }
+            }
+    }
+}
+</script>
